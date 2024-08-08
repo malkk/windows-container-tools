@@ -373,7 +373,7 @@ The Process Monitor will stream the output for `c:\windows\system32\ping.exe -n 
 ### Description
 By default, logs will be displayed in JSON format. However, users can change the log format to either `XML` or their own `custom` defined format.
 
-To specify the log format, a user needs to configure the `logFormat` field in `LogMonitorConfig.json` to either `XML`, `JSON` or `Custom` <em>(the field value is not case-insensitive)</em>
+To specify the log format, a user needs to configure the `logFormat` field in `LogMonitorConfig.json` to either `XML`, `JSON` or `Custom` <em>(the field value is case-sensitive)</em>
 <br>For `JSON` and `XML` log formats, no additional configurations are required. However, the `Custom` log format, needs further configuration. For custom log formats, a user needs to specify the `customLogFormat` at the source level.
 
 ### Custom Log Format Pattern Layout
@@ -419,7 +419,7 @@ Each log source tracked by log monitor <em>(ETW, Log File, Events, and Process M
 ```json
 {
   "LogConfig": {
-    "logFormat": "custom",
+    "logFormat": "Custom",
     "sources": [
       {
         "type": "ETW",
@@ -456,7 +456,7 @@ For example:
 ```json
 {
   "LogConfig": {
-	"logFormat": "custom",
+	"logFormat": "Custom",
         "sources": [
 	      {
                 "type": "ETW",
