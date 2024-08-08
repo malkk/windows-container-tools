@@ -195,7 +195,7 @@ ReadLogConfigObject(
             }
             else
             {
-                logWriter.TraceWarning(Utility::FormatString(L"Error parsing configuration file. 'Unknow key %ws in the configuration file.", key.c_str()).c_str());
+                logWriter.TraceWarning(Utility::FormatString(L"Error parsing configuration file. 'Unknown key %ws in the configuration file.", key.c_str()).c_str());
                 Parser.SkipValue();
             }
         } while (Parser.ParseNextObjectElement());
